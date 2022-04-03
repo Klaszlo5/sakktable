@@ -5,9 +5,9 @@ for(var i=1; i<=8; i++) {
   document.write("<tr>");
   for(var j=1; j<=8; j++) {
     if((i+j)%2!=0) {
-      document.write("<td bgcolor='white' onclick='megnyom();'></td>");
+      document.write("<td bgcolor='white'></td>").addEventListener('click', megnyom, false);
     }else{
-      document.write("<td bgcolor='black' onclick='megnyom();'></td>");
+      document.write("<td bgcolor='black'></td>").addEventListener('click', megnyom, false);
     }
   }
   document.write("</tr>");
