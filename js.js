@@ -5,15 +5,19 @@ for(var i=1; i<=8; i++) {
   document.write("<tr>");
   for(var j=1; j<=8; j++) {
     if((i+j)%2!=0) {
-      document.write("<td bgcolor='white'></td>").addEventListener('click', megnyom, false);
+      document.write("<td bgcolor='white'></td>")
     }else{
-      document.write("<td bgcolor='black'></td>").addEventListener('click', megnyom, false);
+      document.write("<td bgcolor='black'></td>")
     }
   }
   document.write("</tr>");
 }
 document.write("</table>");
 }
+var t = document.getElementById("table");
+var tds = t.getElementsByTagName("td");
+
+tds.addEventListener('click', megnyom, false);
 function megnyom(event)
 {
   event.target.html("a");
